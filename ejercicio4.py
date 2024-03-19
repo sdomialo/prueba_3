@@ -1,9 +1,8 @@
-import Nodo
 class Polinomio:
     """
     This class represents a polynomial.
     """
-    def _init_(self):
+    def __init__(self):
         self.coeficientes = []
 
     def agregar_termino(self, coeficiente):
@@ -25,10 +24,7 @@ class Polinomio:
         """
         Check if a term exists in the polynomial.
         """
-        if grado < len(self.coeficientes):
-            return True
-        else:
-            return False
+        return grado < len(self.coeficientes)
 
     def evaluar(self, x):
         """
@@ -89,9 +85,9 @@ else:
         coeficiente = polinomio.coeficientes[i] / polinomio2.coeficientes[0]
         polinomio_division.agregar_termino(coeficiente)
 
-if _name_ == "_main_":
-            # Agregar el código adicional aquí
-            pass
+if __name__ == "__main__":
+    # Agregar el código adicional aquí
+    pass
 
 # Imprimir resultados
 print("Polinomio 1:", polinomio.coeficientes)
